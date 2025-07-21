@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Drowsiness Detection</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #90ee90; /* light green */
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 2.5rem;
+        }
+
+        .video-container {
+            background-color: #1a1a1a;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 20px #90ee90;
+        }
+
+        img {
+            width: 720px;
+            max-width: 90vw;
+            border: 4px solid #90ee90;
+            border-radius: 10px;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 1rem;
+            color: #cccccc;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            img {
+                width: 100%;
+            }
+
+            .video-container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Driver Drowsiness Detection</h1>
+    <div class="video-container">
+        <img src="{{ url_for('video') }}" alt="Drowsiness Detection Live Feed">
+    </div>
+    <div class="footer">
+        Press <strong>Ctrl + C</strong> in terminal or close tab to stop the system.
+    </div>
+</body>
+</html>
